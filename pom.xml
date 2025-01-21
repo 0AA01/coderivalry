@@ -5,13 +5,32 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.xzj.coderivalry</groupId>
-    <artifactId>coderivalry</artifactId>
+    <artifactId>coderivalry-all</artifactId>
     <version>1.0-SNAPSHOT</version>
+
+    <packaging>pom</packaging>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <modules>
+        <module>services</module>
+        <module>frameworks</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.xzj.coderivalry</groupId>
+                <artifactId>coderivalry-dependencies</artifactId>
+                <version>${project.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 </project>
