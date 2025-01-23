@@ -1,4 +1,4 @@
-package com.xzj.coderivalry.dao.utils.enums;
+package com.xzj.coderivalry.dao.enums;
 
 import lombok.Getter;
 

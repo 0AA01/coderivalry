@@ -1,6 +1,6 @@
 package com.xzj.coderivalry.dao.entiry;
 
-import com.xzj.coderivalry.dao.utils.enums.UserTypeEnum;
+import com.xzj.coderivalry.dao.enums.UserTypeEnum;
 import com.xzj.coderivalry.framework.starter.database.base.BaseDO;
 import lombok.Data;
 

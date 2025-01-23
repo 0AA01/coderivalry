@@ -23,7 +23,6 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-
         <dependency>
             <groupId>com.xzj.coderivalry</groupId>
             <artifactId>coderivalry-database-spring-booot-starter</artifactId>
