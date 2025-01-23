@@ -4,7 +4,7 @@ target/
 !**/src/test/**/target/
 
 ### IntelliJ IDEA ###
-.idea/git rm -r --cached .idea
+.idea
 *.iws
 *.iml
 *.ipr
