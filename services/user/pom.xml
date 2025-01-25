@@ -28,6 +28,24 @@
             <artifactId>coderivalry-database-spring-booot-starter</artifactId>
             <version>${project.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.xzj.coderivalry</groupId>
+            <artifactId>coderivalry-convention-spring-boot-starter</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.xzj.coderivalry</groupId>
+            <artifactId>coderivalry-web-spring-boot-starter</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.xzj.coderivalry</groupId>
+            <artifactId>coderivalry-cache-spring-boot-starter</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
 
 </project>

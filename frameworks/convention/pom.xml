@@ -5,21 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.xzj.coderivalry</groupId>
-        <artifactId>coderivalry-all</artifactId>
+        <artifactId>coderivalry-frameworks</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <packaging>pom</packaging>
-
-    <artifactId>coderivalry-frameworks</artifactId>
-
-    <modules>
-        <module>base</module>
-        <module>database</module>
-        <module>convention</module>
-        <module>web</module>
-        <module>cache</module>
-    </modules>
+    <artifactId>coderivalry-convention-spring-boot-starter</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
