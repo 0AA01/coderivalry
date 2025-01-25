@@ -1,5 +1,6 @@
 package com.xzj.coderivalry.biz.userservice.dao.entiry;
 
+import com.baomidou.mybatisplus.annotation.TableName;
 import com.xzj.coderivalry.biz.userservice.dao.enums.UserTypeEnum;
 import com.xzj.coderivalry.framework.starter.database.base.BaseDO;
 import lombok.Data;
@@ -8,6 +9,7 @@ import lombok.Data;
  * 用户实体
  * @author xzj
  */
+@TableName("user")
 @Data
 public class UserDO extends BaseDO {
 
