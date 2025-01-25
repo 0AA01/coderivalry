@@ -1,0 +1,1 @@
+insert into user value (null, 'xzj', '123456', '15063012345', 'xzj200310@163.com', null, 1500, 0, NOW(), 1);
