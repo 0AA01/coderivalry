@@ -1,8 +1,7 @@
 package com.xzj.coderivalry.biz.userservice.dao.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.xzj.coderivalry.biz.userservice.dao.entiry.UserDO;
-import org.apache.ibatis.annotations.Mapper;
+import com.xzj.coderivalry.biz.userservice.dao.entity.UserDO;
 
 /**
  * 用户持久层

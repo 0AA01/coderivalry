@@ -1,7 +1,7 @@
 package com.xzj.coderivalry.biz.userservice.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.xzj.coderivalry.biz.userservice.dao.entiry.UserDO;
+import com.xzj.coderivalry.biz.userservice.dao.entity.UserDO;
 import com.xzj.coderivalry.biz.userservice.dto.req.UserRegisterReqDTO;
 
 /**

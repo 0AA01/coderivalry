@@ -1,10 +1,8 @@
 package com.xzj.coderivalry.biz.userservice.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.mysql.cj.util.StringUtils;
 import com.xzj.coderivalry.biz.userservice.common.constant.RedisConstant;
-import com.xzj.coderivalry.biz.userservice.config.RBloomFilterConfiguration;
-import com.xzj.coderivalry.biz.userservice.dao.entiry.UserDO;
+import com.xzj.coderivalry.biz.userservice.dao.entity.UserDO;
 import com.xzj.coderivalry.biz.userservice.dao.mapper.UserMapper;
 import com.xzj.coderivalry.biz.userservice.dto.req.UserRegisterReqDTO;
 import com.xzj.coderivalry.biz.userservice.service.UserService;

@@ -1,4 +1,4 @@
-package com.xzj.coderivalry.biz.userservice.dao.entiry;
+package com.xzj.coderivalry.biz.userservice.dao.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.xzj.coderivalry.biz.userservice.dao.enums.UserTypeEnum;
