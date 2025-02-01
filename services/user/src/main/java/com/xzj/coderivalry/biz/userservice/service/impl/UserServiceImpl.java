@@ -102,4 +102,11 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, UserDO> implements 
             lock.unlock();
         }
     }
+
+    @Override
+    public void logout(String token) {
+        if (StringUtil.isNotBlank(token)) {
+            distributedCache.delete(token);
+        }
+    }
 }

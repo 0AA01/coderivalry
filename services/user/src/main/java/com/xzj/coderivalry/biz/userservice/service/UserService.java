@@ -26,4 +26,10 @@ public interface UserService extends IService<UserDO> {
      * @return 用户登录返回结果
      */
     UserLoginVO login(UserLoginReqDTO requestParam);
+
+    /**
+     * 用户退出登录
+     * @param token 用户Token
+     */
+    void logout(String token);
 }

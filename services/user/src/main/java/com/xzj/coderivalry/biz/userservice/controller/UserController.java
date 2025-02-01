@@ -7,10 +7,7 @@ import com.xzj.coderivalry.biz.userservice.vo.UserLoginVO;
 import com.xzj.coderivalry.framework.starter.convention.result.Result;
 import com.xzj.coderivalry.framework.starter.web.utils.Results;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * 用户控制层
@@ -38,5 +35,14 @@ public class UserController {
     @PostMapping("/user/login")
     public Result<UserLoginVO> login(@RequestBody UserLoginReqDTO requestParam) {
         return Results.success(userService.login(requestParam));
+    }
+
+    /**
+     * 用户退出登录
+     */
+    @GetMapping("/user/logout")
+    public Result<Void> logout(@RequestParam String token) {
+        userService.logout(token);
+        return Results.success();
     }
 }
