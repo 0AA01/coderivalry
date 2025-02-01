@@ -13,6 +13,7 @@ public enum BaseErrorCode implements IErrorCode {
 
     // ========== 一级宏观错误码 系统执行出错 ==========
     SERVICE_ERROR("B000001", "系统执行出错"),
+    USER_NOT_EXIST("B000100", "用户不存在"),
 
     // ========== 一级宏观错误码 调用第三方服务出错 ==========
     REMOTE_ERROR("C000001", "调用第三方服务出错");
