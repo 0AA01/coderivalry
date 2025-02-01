@@ -1,7 +1,9 @@
 package com.xzj.coderivalry.biz.userservice.controller;
 
+import com.xzj.coderivalry.biz.userservice.dto.req.UserLoginReqDTO;
 import com.xzj.coderivalry.biz.userservice.dto.req.UserRegisterReqDTO;
 import com.xzj.coderivalry.biz.userservice.service.UserService;
+import com.xzj.coderivalry.biz.userservice.vo.UserLoginVO;
 import com.xzj.coderivalry.framework.starter.convention.result.Result;
 import com.xzj.coderivalry.framework.starter.web.utils.Results;
 import lombok.RequiredArgsConstructor;
@@ -25,5 +27,10 @@ public class UserController {
     public Result<Void> register(@RequestBody UserRegisterReqDTO requestParam) {
         userService.register(requestParam);
         return Results.success();
+    }
+
+    @PostMapping("/user/login")
+    public Result<UserLoginVO> login(@RequestBody UserLoginReqDTO requestParam) {
+        return Results.success(userService.login(requestParam));
     }
 }
