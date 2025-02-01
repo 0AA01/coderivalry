@@ -46,6 +46,12 @@
             <artifactId>coderivalry-cache-spring-boot-starter</artifactId>
             <version>${project.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.xzj.coderivalry</groupId>
+            <artifactId>coderivalry-common-spring-boot-starter</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
 
 </project>

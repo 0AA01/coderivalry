@@ -19,6 +19,7 @@
         <module>convention</module>
         <module>web</module>
         <module>cache</module>
+        <module>common</module>
     </modules>
 
     <properties>

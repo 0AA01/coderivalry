@@ -17,6 +17,12 @@
         <shardingsphere-jdbc.version>5.5.0</shardingsphere-jdbc.version>
         <mybatis-plus.version>3.5.7</mybatis-plus.version>
         <redisson.version>3.21.3</redisson.version>
+        <hibernate-validator.version>8.0.1.Final</hibernate-validator.version>
+        <jjwt.version>0.9.1</jjwt.version>
+        <guava.version>30.0-jre</guava.version>
+        <fastjson2.version>2.0.53</fastjson2.version>
+        <jaxv-api.version>2.3.1</jaxv-api.version>
+        <jaxv-runtime.version>2.3.1</jaxv-runtime.version>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -68,6 +74,42 @@
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.hibernate.validator</groupId>
+                <artifactId>hibernate-validator</artifactId>
+                <version>${hibernate-validator.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt</artifactId>
+                <version>${jjwt.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba.fastjson2</groupId>
+                <artifactId>fastjson2</artifactId>
+                <version>${fastjson2.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>javax.xml.bind</groupId>
+                <artifactId>jaxb-api</artifactId>
+                <version>${jaxv-api.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.glassfish.jaxb</groupId>
+                <artifactId>jaxb-runtime</artifactId>
+                <version>${jaxv-runtime.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
