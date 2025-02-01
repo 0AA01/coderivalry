@@ -6,7 +6,7 @@ create table user
     username          varchar(256)            not null comment '用户名',
     password          varchar(512)            not null comment '密码',
     phone             varchar(128)            null comment '手机号',
-    mail              varchar(512)            null comment '邮箱',
+    email              varchar(512)            null comment '电子邮箱',
     deletion_time     datetime                null comment '注销时间戳',
     competition_score int        default 1500 not null comment '竞赛分数',
     user_type         tinyint(1) default 0    not null comment '用户类型，0：普通用户，1：管理员',
