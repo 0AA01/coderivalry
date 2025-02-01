@@ -23,12 +23,18 @@ public class UserController {
 
     private final UserService userService;
 
+    /**
+     * 用户注册
+     */
     @PostMapping("/user")
     public Result<Void> register(@RequestBody UserRegisterReqDTO requestParam) {
         userService.register(requestParam);
         return Results.success();
     }
 
+    /**
+     * 用户登录
+     */
     @PostMapping("/user/login")
     public Result<UserLoginVO> login(@RequestBody UserLoginReqDTO requestParam) {
         return Results.success(userService.login(requestParam));
