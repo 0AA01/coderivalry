@@ -6,7 +6,7 @@ create table user
     username          varchar(256)            not null comment '用户名',
     password          varchar(512)            not null comment '密码',
     phone             varchar(128)            null comment '手机号',
-    email              varchar(512)            null comment '电子邮箱',
+    email             varchar(512)            null comment '电子邮箱',
     deletion_time     datetime                null comment '注销时间戳',
     competition_score int        default 1500 not null comment '竞赛分数',
     user_type         tinyint(1) default 0    not null comment '用户类型，0：普通用户，1：管理员',
@@ -58,4 +58,20 @@ create table algorithmic_problem_log
     log_status       varchar(32)  not null comment '日志状态',
     create_time      datetime     not null comment '创建时间',
     del_flag         tinyint(1)   not null comment '删除标识 0：未删除 1：已删除'
+);
+
+drop table if exists user_competition_score;
+create table user_competition_score
+(
+    id          bigint auto_increment comment 'ID'
+        primary key,
+    username    varchar(256)     not null comment '用户名',
+    score       int default 1500 not null comment '竞赛分数',
+    max_score   int default 1500 not null comment '最大竞赛分数',
+    update_time datetime         not null comment '更新时间',
+    create_time datetime         not null comment '创建时间',
+    del_flag    tinyint(1)       not null comment '删除标识 0：未删除 1：已删除',
+    constraint idx_unique_username
+        unique (username),
+    index idx_update_time (update_time)
 );
