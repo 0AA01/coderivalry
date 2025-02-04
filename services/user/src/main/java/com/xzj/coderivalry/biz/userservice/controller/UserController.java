@@ -1,11 +1,14 @@
 package com.xzj.coderivalry.biz.userservice.controller;
 
+import com.xzj.coderivalry.biz.userservice.dto.req.UserCompetitionRankingReqDTO;
 import com.xzj.coderivalry.biz.userservice.dto.req.UserLoginReqDTO;
 import com.xzj.coderivalry.biz.userservice.dto.req.UserRegisterReqDTO;
 import com.xzj.coderivalry.biz.userservice.service.UserCompetitionScoreService;
 import com.xzj.coderivalry.biz.userservice.service.UserService;
+import com.xzj.coderivalry.biz.userservice.vo.UserCompetitionRankingVO;
 import com.xzj.coderivalry.biz.userservice.vo.UserCompetitionScoreVO;
 import com.xzj.coderivalry.biz.userservice.vo.UserLoginVO;
+import com.xzj.coderivalry.framework.starter.convention.page.PageResponse;
 import com.xzj.coderivalry.framework.starter.convention.result.Result;
 import com.xzj.coderivalry.framework.starter.web.utils.Results;
 import lombok.RequiredArgsConstructor;
@@ -55,5 +58,13 @@ public class UserController {
     @GetMapping("/user/cScore")
     public Result<UserCompetitionScoreVO> cScore(@RequestParam(name = "username") String username) {
         return Results.success(userCompetitionScoreService.cScore(username));
+    }
+
+    /**
+     * 查看竞赛排行榜
+     */
+    @GetMapping("/user/ranking")
+    public Result<PageResponse<UserCompetitionRankingVO>> cRanking(@RequestBody UserCompetitionRankingReqDTO requestParam) {
+        return Results.success(userCompetitionScoreService.cRanking(requestParam));
     }
 }

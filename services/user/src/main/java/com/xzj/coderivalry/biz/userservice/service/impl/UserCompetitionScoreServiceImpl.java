@@ -5,9 +5,12 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.xzj.coderivalry.biz.userservice.common.constant.RedisConstant;
 import com.xzj.coderivalry.biz.userservice.dao.entity.UserCompetitionScoreDO;
 import com.xzj.coderivalry.biz.userservice.dao.mapper.UserCompetitionScoreMapper;
+import com.xzj.coderivalry.biz.userservice.dto.req.UserCompetitionRankingReqDTO;
 import com.xzj.coderivalry.biz.userservice.service.UserCompetitionScoreService;
+import com.xzj.coderivalry.biz.userservice.vo.UserCompetitionRankingVO;
 import com.xzj.coderivalry.biz.userservice.vo.UserCompetitionScoreVO;
 import com.xzj.coderivalry.framework.starter.cache.DistributedCache;
+import com.xzj.coderivalry.framework.starter.convention.page.PageResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -36,5 +39,11 @@ public class UserCompetitionScoreServiceImpl extends ServiceImpl<UserCompetition
                     }
                     return userCSVO;
                 }, 7, TimeUnit.DAYS);
+    }
+
+    @Override
+    public PageResponse<UserCompetitionRankingVO> cRanking(UserCompetitionRankingReqDTO requestParam) {
+        // todo lua脚本实现
+        return null;
     }
 }

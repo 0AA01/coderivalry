@@ -3,7 +3,7 @@ package com.xzj.coderivalry.biz.userservice.vo;
 import lombok.Data;
 
 /**
- * 竞赛分数信息
+ * 竞赛分数信息展示
  */
 @Data
 public class UserCompetitionScoreVO {

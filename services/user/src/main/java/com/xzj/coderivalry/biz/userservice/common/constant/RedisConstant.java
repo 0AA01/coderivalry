@@ -23,5 +23,5 @@ public class RedisConstant {
     /**
      * LUA查看用户竞赛排名
      */
-    private static final String LUA_GET_USER_COMPETITION_RANKING_SCRIPT_PATH = "lua/getUserCompetitionRanking.lua";
+    private static final String LUA_GET_USER_COMPETITION_RANKING_SCRIPT_PATH = "lua/updateUserCompetitionRanking.lua";
 }
