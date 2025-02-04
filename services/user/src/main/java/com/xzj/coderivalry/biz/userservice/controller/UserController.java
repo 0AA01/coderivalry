@@ -2,7 +2,9 @@ package com.xzj.coderivalry.biz.userservice.controller;
 
 import com.xzj.coderivalry.biz.userservice.dto.req.UserLoginReqDTO;
 import com.xzj.coderivalry.biz.userservice.dto.req.UserRegisterReqDTO;
+import com.xzj.coderivalry.biz.userservice.service.UserCompetitionScoreService;
 import com.xzj.coderivalry.biz.userservice.service.UserService;
+import com.xzj.coderivalry.biz.userservice.vo.UserCompetitionScoreVO;
 import com.xzj.coderivalry.biz.userservice.vo.UserLoginVO;
 import com.xzj.coderivalry.framework.starter.convention.result.Result;
 import com.xzj.coderivalry.framework.starter.web.utils.Results;
@@ -19,6 +21,7 @@ import org.springframework.web.bind.annotation.*;
 public class UserController {
 
     private final UserService userService;
+    private final UserCompetitionScoreService userCompetitionScoreService;
 
     /**
      * 用户注册
@@ -41,8 +44,16 @@ public class UserController {
      * 用户退出登录
      */
     @GetMapping("/user/logout")
-    public Result<Void> logout(@RequestParam String token) {
+    public Result<Void> logout(@RequestParam(name = "token") String token) {
         userService.logout(token);
         return Results.success();
+    }
+
+    /**
+     * 查看竞赛分数
+     */
+    @GetMapping("/user/cScore")
+    public Result<UserCompetitionScoreVO> cScore(@RequestParam(name = "username") String username) {
+        return Results.success(userCompetitionScoreService.cScore(username));
     }
 }
